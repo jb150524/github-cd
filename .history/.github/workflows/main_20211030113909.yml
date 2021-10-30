@@ -1,0 +1,17 @@
+name: Deploy
+
+    on:
+      push:
+        branches:
+          - main
+
+    jobs:
+      build:
+        runs-on: ubuntu-latest
+        steps:
+          - uses: actions/checkout@v2
+          - uses: akhileshns/heroku-deploy@v3.12.11
+            with:
+              heroku_api_key: ${{40b93892-e4a4-4e2f-b9ef-ee06a1bf8490}}
+              heroku_app_name: "Enter-Heroku-App-Name"
+              heroku_email: "juanbb1505@gmail.com"
